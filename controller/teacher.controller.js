@@ -30,7 +30,10 @@ const create = async (req, res) => {
         email: req.body.email,
         age: req.body.age,
         contact: req.body.contact,
-        password: req.body.password
+        experience: req.body.experience,
+        subject: req.body.subject,
+        qualification: req.body.qualification,
+        bio: req.body.bio
     })
     .then(result => {
         res.json({
@@ -48,7 +51,10 @@ const update = async (req, res) => {
         email: req.body.email,
         age: req.body.age,
         contact: req.body.contact,
-        password: req.body.password
+        experience: req.body.experience,
+        subject: req.body.subject,
+        qualification: req.body.qualification,
+        bio: req.body.bio
     })
     .then(result => {
         res.json({

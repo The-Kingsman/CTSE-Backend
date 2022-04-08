@@ -15,7 +15,16 @@ const teacher = mongo.Schema({
     contact: {
         type: Number
     },
-    password: {
+    experience: {
+        type: String
+    },
+    subject: {
+        type: String
+    },
+    qualification: {
+        type: String
+    },
+    bio: {
         type: String
     }
 });
