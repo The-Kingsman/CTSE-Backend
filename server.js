@@ -5,9 +5,8 @@ const config = require('config')
 const app = express()
 
 const teacherRoute = require('./routes/teacher.routes')
-const subjectRoute = require('./routes/Subject.routes')
+const classRoute = require('./routes/Class.routes')
 const ratingRoute = require('./routes/Rating.routes')
-const studentRoute = require('./routes/student.routes')
 const userRoute = require('./routes/User.routes');
 
 const cors = require('cors')
@@ -29,9 +28,9 @@ connection.once('open', () => {
 })
 
 router.use('/teacher', teacherRoute)
-router.use('/subject', subjectRoute)
+router.use('/class', classRoute)
 router.use('/rating', ratingRoute)
-router.use('/student', studentRoute)
+router.use('/user', userRoute)
 
 app.use('/api/v1', router)
 

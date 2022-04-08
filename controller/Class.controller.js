@@ -28,7 +28,9 @@ const getById = async (req, res) => {
 
 const create = async (req, res) => {
 
-  const {time,
+  const {
+  teacher_id,
+  time,
   location,
   fee,
   day,
@@ -37,6 +39,7 @@ const create = async (req, res) => {
   decription } = req.body;
   await _class
     .create({
+      teacher_id: req.body.teacher_id,
       time: req.body.time,
       location: req.body.location,
       fee: req.body.fee,
@@ -92,4 +95,17 @@ const deleteById = async (req, res) => {
     })
 }
 
-module.exports = { getAll, getById, create, update, deleteById }
+const getByTeacher = async (req,res) => {
+  await _class
+    .find({ teacher_id: req.params.id })
+    .then((result) => {
+      res.json({
+        results: result,
+      })
+    })
+    .catch((error) => {
+      res.send(error)
+    })
+};
+
+module.exports = { getAll, getById, create, update, deleteById, getByTeacher }

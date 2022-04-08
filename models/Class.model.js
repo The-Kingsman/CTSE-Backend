@@ -1,6 +1,10 @@
 const mongo = require('mongoose')
 
 const _class = mongo.Schema({
+  teacher_id: {
+    type: String,
+    required: true
+  },
   time: {
     type: String,
     required: false,
