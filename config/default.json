@@ -1,0 +1,5 @@
+{
+  "db": "mongodb+srv://DefaultUser:CTSEsecret@cluster0.yx3l7.mongodb.net/CTSEDB?retryWrites=true&w=majority",
+  "port": 5000,
+  "x-auth-token-secret": "sEcrEtctsE"
+}
