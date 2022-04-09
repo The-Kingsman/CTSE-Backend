@@ -10,10 +10,10 @@ const user = mongo.Schema({
         required: true 
     },
     age: {
-        type: Number
+        type: String
     },
     contact: {
-        type: Number
+        type: String
     },
     password: {
         type: String
