@@ -82,6 +82,9 @@ const update = async (req, res) => {
         password: password,
     })
     .then(result => {
+        return user.findOne({_id: result._id})
+    })
+    .then(result => {
         res.json({
             result: result
         })
