@@ -3,7 +3,7 @@ const mongo = require('mongoose')
 const rating = mongo.Schema({
   teacher_id: {
     type: String,
-    required: SVGComponentTransferFunctionElement,
+    required: true,
   },
   user_id: {
     type: String,
