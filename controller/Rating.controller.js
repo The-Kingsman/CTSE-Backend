@@ -30,8 +30,10 @@ const create = async (req, res) => {
 	await rating
 		.create({
 			teacher_name: req.body.teacher_name,
-			rating: req.body.rating,
-			comment: req.body.comment,
+				user_id: req.body.user_id,
+				username: req.body.username,
+				rating: req.body.rating,
+				comment: req.body.comment,
 		})
 		.then((result) => {
 			res.json({
@@ -49,6 +51,8 @@ const update = async (req, res) => {
 			{ _id: req.params.id },
 			{
 				teacher_name: req.body.teacher_name,
+				user_id: req.body.user_id,
+				username: req.body.username,
 				rating: req.body.rating,
 				comment: req.body.comment,
 			}

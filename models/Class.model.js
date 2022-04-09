@@ -7,31 +7,31 @@ const _class = mongo.Schema({
   },
   time: {
     type: String,
-    required: false,
+    required: true,
   },
   location: {
     type: String,
-    required: false,
+    required: true,
   },
   fee: {
     type: String,
-    required: false,
+    required: true,
   },
   day: {
     type: String,
-    required: false,
+    required: true,
   },
   subject: {
     type: String,
-    required: false,
+    required: true,
   },
   grade: {
     type: String,
-    required: false,
+    required: true,
   },
   description: {
     type: String,
-    required: false,
+    required: true,
   },
 })
 module.exports = mongo.model('class', _class)
