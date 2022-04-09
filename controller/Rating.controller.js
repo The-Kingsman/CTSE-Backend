@@ -57,6 +57,9 @@ const update = async (req, res) => {
 				comment: req.body.comment,
 			}
 		)
+		.then(result => {
+			return rating.findOne({_id: result._id})
+		})
 		.then((result) => {
 			res.json({
 				results: result,

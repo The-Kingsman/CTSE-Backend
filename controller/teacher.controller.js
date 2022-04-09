@@ -57,6 +57,9 @@ const update = async (req, res) => {
         bio: req.body.bio
     })
     .then(result => {
+        return teacher.findOne({_id: result._id})
+    })
+    .then(result => {
         res.json({
             results: result
         });

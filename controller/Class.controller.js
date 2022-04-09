@@ -72,6 +72,9 @@ const update = async (req, res) => {
         description: req.body.description
       },
     )
+    .then(result => {
+      return _class.findOne({_id: result._id})
+  })
     .then((result) => {
       res.json({
         results: result,
